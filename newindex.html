@@ -18,7 +18,10 @@
         }
         function szamol()
         {
-            alert ("szamol");
+            var r = document.getElementById("sugar").value;
+
+            document.getElementById("Kerulet").innerHTML="K="+Kerulet(r)+"<hr>"
+            document.getElementById("Terulet").innerHTML="T="+Terulet(r)
         }
     </script>
     
@@ -31,5 +34,7 @@
     <p>
         <input type="button" name="" id="" value="Számol" onclick="szamol()">
     </p>
+    <h1><div id="Kerulet"></div></h1>
+    <h1><div id="Terulet"></div></h1>
 </body>
 </html>
