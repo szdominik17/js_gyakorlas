@@ -10,20 +10,24 @@
 
         function Kerulet(r)
         {
-            return 2*r*Math.PI();
+            return 2*r*Math.PI;
         }
         function Terulet(r)
         {
             return Math.pow(r,2)*Math.PI;
         }
-
-        document.write("Kerulet:" + Kerulet(5));
-        document.write("Terulet:" + Terulet(5));
+        function kiir()
+        {
+            document.body.style.backgroundColor="cyan";
+            document.getElementById("Kerulet").innerHTML="K="+Kerulet(4);
+            document.getElementById("Terulet").innerHTML="T="+Terulet(4);
+        }
         
     </script>
     
 </head>
-<body>
-
+<body onload="kiir()">
+    <div id="Kerulet">ide fog kerülni a kerulet</div>
+    <div id="Terulet">ide fog kerülni a terulet</div>
 </body>
 </html>
