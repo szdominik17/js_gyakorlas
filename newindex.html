@@ -16,23 +16,20 @@
         {
             return Math.pow(r,2)*Math.PI;
         }
-        function kiir()
+        function szamol()
         {
-            document.body.style.backgroundColor="cyan";
-            document.getElementById("Kerulet").innerHTML="K="+Kerulet(4);
-            document.getElementById("Terulet").innerHTML="T="+Terulet(4);
+            alert ("szamol");
         }
-        
     </script>
     
 </head>
 <body>
     <p>
         A kör sugara:
-        <input type="number" min="0" max="100">
+        <input type="number" min="0" max="100" id="sugar">
     </p>
     <p>
-        <input type="button" name="" id="" value="Számol">
+        <input type="button" name="" id="" value="Számol" onclick="szamol()">
     </p>
 </body>
 </html>
