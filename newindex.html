@@ -10,18 +10,25 @@
 
         function Kerulet(r)
         {
-            return 2*r*Math.PI;
+            return Math.round(2*r*Math.PI);
         }
         function Terulet(r)
         {
-            return Math.pow(r,2)*Math.PI;
+            return Math.round(Math.pow(r,2)*Math.PI);
         }
         function szamol()
         {
             var r = document.getElementById("sugar").value;
 
-            document.getElementById("Kerulet").innerHTML="K="+Kerulet(r)+"<hr>"
+            document.getElementById("Kerulet").innerHTML="K="+Kerulet(r)+"<br>"
             document.getElementById("Terulet").innerHTML="T="+Terulet(r)
+        }
+        function kalkulal()
+        {
+            var sugarertek=document.getElementById("csuszka").value
+            document.getElementById(ertek).innerHTML=sugarertek
+            document.getElementById("Kerulet").innerHTML="K="+Kerulet(sugarertek)+"<br>"
+            document.getElementById("Terulet").innerHTML="T="+Terulet(sugarertek)
         }
     </script>
     
@@ -32,9 +39,16 @@
         <input type="number" min="0" max="100" id="sugar">
     </p>
     <p>
-        <input type="button" name="" id="" value="Számol" onclick="szamol()">
+        <input type="button" id="" value="Számol" onclick="szamol()">
     </p>
     <h1><div id="Kerulet"></div></h1>
     <h1><div id="Terulet"></div></h1>
+    
+    <hr>
+
+    <p>
+        <input type="range" id="csuszka" min="0" max="10" step="1" onchange="kalkulal()">
+    <span id="ertek"></span>
+    </p>
 </body>
 </html>
